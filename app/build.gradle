@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'android-apt'
 
 android {
     compileSdkVersion 25
@@ -36,4 +38,20 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.1.0'
     testCompile 'junit:junit:4.12'
+}
+
+// app compat
+dependencies {
+    compile 'com.android.support:appcompat-v7:25.1.0'
+}
+
+// bind views
+dependencies {
+    compile 'com.jakewharton:butterknife:8.5.1'
+    apt 'com.jakewharton:butterknife-compiler:8.5.1'
+}
+
+// custom views
+dependencies {
+    compile 'com.android.support:recyclerview-v7:25.1.0'
 }

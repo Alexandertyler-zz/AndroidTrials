@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/main_toolbar"
+        android:id="@+id/toolbar"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hashmap_title"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="14dp"
+        android:text="@string/hashmap_body"
+        android:layout_marginTop="20dp"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:id="@+id/key"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:hint="Key"/>
+
+        <EditText
+            android:id="@+id/value"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:hint="Value"
+            android:layout_toRightOf="@+id/key"/>
+
+        <Button
+            android:id="@+id/put"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/key"
+            android:layout_margin="20dp"
+            android:text="Put"
+            android:onClick="onPut"/>
+
+        <Button
+            android:id="@+id/get"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/value"
+            android:layout_alignLeft="@+id/value"
+            android:layout_margin="20dp"
+            android:text="Get"
+            android:onClick="onGet"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
